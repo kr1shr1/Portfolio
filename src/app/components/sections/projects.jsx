@@ -10,7 +10,7 @@ const projects = [
       "Scalable MERN-based ride-sharing app with real-time communication and secure payments. Features dynamic routing with Google Maps API and a comprehensive review system.",
     tech: ["React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS", "RazorPay API"],
     link: "https://carsaathi-carpool.netlify.app/",
-    github: "#",
+    github: "https://github.com/kr1shr1/Car-Saathi",
     image: "/ride-sharing-app.png",
     period: "Mar - Apr 2024",
   },
@@ -19,7 +19,7 @@ const projects = [
     description:
       "Comprehensive course and task management platform with role-based profiles, group collaboration, and gamified challenges. Features event scheduling and team submissions.",
     tech: ["Next.js", "MongoDB", "Cloudinary", "Nodemailer", "Tailwind CSS"],
-    link: "#",
+    link: "https://acadhelper.vercel.app/",
     github: "#",
     image: "/course-management-platform.jpg",
     period: "Nov - Dec 2024",
@@ -30,7 +30,7 @@ const projects = [
       "Collaborative website builder with drag-and-drop components, real-time code generation, and integrated GitHub workflow. Supports team collaboration, repo management, and OAuth authentication via GitHub.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Craft.js", "ShadCN", "GitHub API", "NextAuth.js"],
     link: "https://buildzy.vercel.app/",
-    github: "#",
+    github: "https://github.com/kr1shr1/Buildzy",
     image: "/image.png",
     period: "Feb - Jun 2025",
   },
@@ -41,7 +41,7 @@ const projects = [
       "MERN-based expense tracker with real-time dashboard, group-based bill splitting, and collaborative features. Automated email workflows with 99% delivery rate.",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Nodemailer"],
     link: "#",
-    github: "#",
+    github: "https://github.com/kr1shr1/CoinChange",
     image: "/expense-tracker-app.jpg",
     period: "Oct - Dec 2023",
   },
@@ -104,18 +104,33 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-4">
-                    <a
+                    {(project.link !== "#") ? <a
                       href={project.link}
                       className="flex items-center gap-2 text-primary hover:text-primary/70 font-semibold transition-colors"
                     >
                       <ExternalLink size={18} /> Live Demo
-                    </a>
+                    </a> : <a
+                      href={project.link} 
+                      onClick={(e) => e.preventDefault()}
+                      className="flex items-center gap-2 text-primary hover:text-primary/70 font-semibold transition-colors"
+                    >
+                      <ExternalLink size={18} /> Live Demo
+                    </a>}
+                    {(project.github !== "#") ?
                     <a
                       href={project.github}
                       className="flex items-center gap-2 text-foreground hover:text-primary font-semibold transition-colors"
                     >
                       <Github size={18} /> Code
-                    </a>
+                    </a>:
+                    <a
+                      href={project.github}
+                      onClick={(e)=>e.preventDefault()}
+                      className="flex items-center gap-2 text-foreground hover:text-primary font-semibold transition-colors"
+                    >
+                      <Github size={18} /> Code
+                    </a>}
+                    
                   </div>
                 </div>
               </div>

@@ -73,7 +73,7 @@ export default function Contact() {
           </div>
 
           <p className="text-muted-foreground">
-            © 2025 Kritarth Shrivastava. All rights reserved. | Built with Next.js & Tailwind CSS
+            © 2025 Kritarth Shrivastava. All rights reserved.
           </p>
         </div>
       </div>
