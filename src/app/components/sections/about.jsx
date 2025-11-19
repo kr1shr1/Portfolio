@@ -21,7 +21,7 @@ export default function About() {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-foreground">About Me</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-foreground">Kritarth Shrivastava</h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
